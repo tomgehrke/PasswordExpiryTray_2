@@ -5,25 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Password_Expiry_Tray_2"
         mc:Ignorable="d"
-        Title="PET Settings" Width="380" Height="265.597" WindowStartupLocation="CenterScreen" Background="{x:Null}" WindowStyle="ToolWindow" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True">
+        Title="PET Settings" Width="400" Height="265" WindowStartupLocation="CenterScreen" Background="{x:Null}" WindowStyle="ToolWindow" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True">
     <Window.Effect>
         <DropShadowEffect BlurRadius="10" ShadowDepth="10" Opacity="0.5"/>
     </Window.Effect>
     <Grid Background="White" Margin="0">
         <Label Content="Timer Interval" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="14,18,0,0" Width="100"/>
-        <TextBox x:Name="TimerIntervalTextBox" PreviewTextInput="TimerIntervalTextBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="30" Margin="119,21,0,0" TextAlignment="Right"/>
-        <Label Content="Warning Interval" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="14,46,0,0" Width="100"/>
-        <TextBox x:Name="WarningIntervalTextBox" PreviewTextInput="WarningIntervalTextBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="30" Margin="119,49,0,0" TextAlignment="Right"/>
-        <Label Content="Warning Threshold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="192,46,0,0" Width="110"/>
-        <TextBox x:Name="WarningThresholdTextBox" PreviewTextInput="WarningThresholdTextBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="30" Margin="307,49,0,0" TextAlignment="Right"/>
-        <Label Content="Alert Interval" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="14,74,0,0" Width="100"/>
-        <TextBox x:Name="AlertIntervalTextBox" PreviewTextInput="AlertIntervalTextBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="30" Margin="119,77,0,0" TextAlignment="Right"/>
-        <Label Content="Alert Threshold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="192,74,0,0" Width="110"/>
-        <TextBox x:Name="AlertThresholdTextBox" PreviewTextInput="AlertThresholdTextBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="30" Margin="307,77,0,0" TextAlignment="Right"/>
+        <TextBox x:Name="TimerIntervalTextBox" PreviewTextInput="TimerIntervalTextBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="30" Margin="134,21,0,0" TextAlignment="Right"/>
+        <Label Content="min" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="164,18,0,0"/>
+
+        <Label Content="Warning Threshold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="14,46,0,0" Width="110"/>
+        <TextBox x:Name="WarningThresholdTextBox" PreviewTextInput="WarningThresholdTextBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="30" Margin="134,49,0,0" TextAlignment="Right"/>
+        <Label Content="days" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="164,46,0,0"/>
+
+        <Label Content="Warning Interval" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="212,46,0,0" Width="100"/>
+        <TextBox x:Name="WarningIntervalTextBox" PreviewTextInput="WarningIntervalTextBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="30" Margin="317,49,0,0" TextAlignment="Right"/>
+        <Label Content="hrs" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="347,46,0,0"/>
+
+        <Label Content="Alert Threshold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="14,74,0,0" Width="110"/>
+        <TextBox x:Name="AlertThresholdTextBox" PreviewTextInput="AlertThresholdTextBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="30" Margin="134,77,0,0" TextAlignment="Right"/>
+        <Label Content="days" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="164,74,0,0"/>
+
+        <Label Content="Alert Interval" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="212,74,0,0" Width="100"/>
+        <TextBox x:Name="AlertIntervalTextBox" PreviewTextInput="AlertIntervalTextBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="30" Margin="317,77,0,0" TextAlignment="Right"/>
+        <Label Content="hrs" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="347,74,0,0"/>
+
         <Label Content="Custom Action" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="14,129,0,0" Width="100"/>
-        <TextBox x:Name="ActionTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="218" Margin="119,132,0,0"/>
-        <Button x:Name="CloseButton" Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="192,192,0,0" Click="CloseButton_Click"/>
-        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="272,192,0,0" Click="SaveButton_Click"/>
+        <TextBox x:Name="ActionTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="254" Margin="119,132,0,0"/>
+
+        <Button x:Name="CloseButton" Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="218,192,0,0" Click="CloseButton_Click"/>
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="298,192,0,0" Click="SaveButton_Click"/>
         <Button x:Name="DefaultsButton" Content="Load Defaults" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="14,192,0,0" Click="DefaultsButton_Click"/>
+
     </Grid>
 </Window>
