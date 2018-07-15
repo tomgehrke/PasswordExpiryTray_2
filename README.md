@@ -25,3 +25,7 @@ There are a number of configurable options:
   * Whatever you can imagine (within reason)
 
 _NOTE: Password Expiry Tray cannot change user passwords. It does not know the user's current password, nor is there any facility for entering a new password in PET._
+
+## Documentation
+
+Documentation can be found in [this project's Github wiki](https://github.com/tomgehrke/PasswordExpiryTray_2/wiki).
