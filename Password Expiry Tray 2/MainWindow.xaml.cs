@@ -91,7 +91,7 @@ namespace Password_Expiry_Tray_2
                     CurrentPriority = GetCurrentPriority(currentTime);
                     priorityChanged = !(originalPriority == CurrentPriority);
                     messageStringBuilder.AppendFormat("Your password was last changed on {0:d} at {0:t}. You have {1} days until it will need to be changed.\n\n", currentActiveDirectoryUser.PasswordLastChangedDate, (currentActiveDirectoryUser.PasswordExpirationDate - currentTime).Days);
-                    tooltipStringBuilder.AppendFormat("Your {0} account password will expire in {1} days on {2:d}", currentActiveDirectoryUser.Context, (currentActiveDirectoryUser.PasswordExpirationDate - currentTime).Days, currentActiveDirectoryUser.PasswordExpirationDate);
+                    tooltipStringBuilder.AppendFormat("Your password expires in {0} days on {1:d}", (currentActiveDirectoryUser.PasswordExpirationDate - currentTime).Days, currentActiveDirectoryUser.PasswordExpirationDate);
                 }
             }
             else
@@ -129,6 +129,7 @@ namespace Password_Expiry_Tray_2
                     break;
             }
 
+            // Tooltips cannot be longer than 64 characters or an exception will be thrown
             MainNotifyIcon.Text = tooltipStringBuilder.ToString();
 
             // Update settings related components
@@ -305,13 +306,13 @@ namespace Password_Expiry_Tray_2
         {
             if (e.ChangedButton == MouseButton.Left) this.DragMove();
         }
-        #endregion
 
         private void ShowNotificationItem_Click(object sender, EventArgs e)
         {
             ShowNotification();
         }
 
+        #endregion
 
     }
 }

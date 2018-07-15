@@ -7,8 +7,11 @@
         mc:Ignorable="d"
         Loaded="MainWindow_Loaded"
         MouseDown="MainWindow_MouseDown"
-        Title="Password Expiry Tray" Height="250" Width="420" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Minimized" SnapsToDevicePixels="True" HorizontalAlignment="Center" VerticalAlignment="Top" Background="{x:Null}" WindowStyle="None" AllowsTransparency="True" Topmost="True" >
+        Title="Password Expiry Tray" Height="250" Width="420" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Minimized" SnapsToDevicePixels="True" HorizontalAlignment="Center" VerticalAlignment="Top" Background="{x:Null}" Topmost="True" WindowStyle="None" AllowsTransparency="True" >
     <Grid x:Name="MainGrid" Margin="0" Background="White">
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="10" ShadowDepth="10" Opacity="0.5"/>
+        </Grid.Effect>
         <Button x:Name="CloseButton" Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Width="121" Margin="290,215,0,0" Height="25" Click="CloseButton_Click"/>
         <Button x:Name="ActionButton" Content="Change Password" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="165,215,0,0" Height="25" Click="ActionButton_Click"/>
         <TextBlock x:Name="MessageTextBlock" Margin="0,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="145" Padding="20" FontSize="14"><Run Text="TextBlock"/></TextBlock>

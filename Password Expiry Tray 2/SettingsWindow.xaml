@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:Password_Expiry_Tray_2"
         mc:Ignorable="d"
         Title="PET Settings" Width="380" Height="265.597" WindowStartupLocation="CenterScreen" Background="{x:Null}" WindowStyle="ToolWindow" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True">
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="10" ShadowDepth="10" Opacity="0.5"/>
+    </Window.Effect>
     <Grid Background="White" Margin="0">
-        <Grid.Effect>
-            <DropShadowEffect/>
-        </Grid.Effect>
         <Label Content="Timer Interval" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="14,18,0,0" Width="100"/>
         <TextBox x:Name="TimerIntervalTextBox" PreviewTextInput="TimerIntervalTextBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="30" Margin="119,21,0,0" TextAlignment="Right"/>
         <Label Content="Warning Interval" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="14,46,0,0" Width="100"/>
