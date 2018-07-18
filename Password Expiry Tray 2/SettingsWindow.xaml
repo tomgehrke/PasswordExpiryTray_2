@@ -11,7 +11,7 @@
     </Window.Effect>
     <Grid Background="White" Margin="0">
         <Label Content="Timer Interval" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="14,18,0,0" Width="100"/>
-        <TextBox x:Name="TimerIntervalTextBox" PreviewTextInput="TimerIntervalTextBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="30" Margin="134,21,0,0" TextAlignment="Right" IsReadOnly="True"/>
+        <TextBox x:Name="TimerIntervalTextBox" PreviewTextInput="TimerIntervalTextBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="30" Margin="134,21,0,0" TextAlignment="Right"/>
         <Label Content="min" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="164,18,0,0"/>
 
         <Label Content="Warning Threshold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="14,46,0,0" Width="110"/>
