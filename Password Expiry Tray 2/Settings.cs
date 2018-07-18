@@ -51,17 +51,16 @@ namespace Password_Expiry_Tray_2
                 }
                 else
                 {
+                    Source = SettingSource.Local;
                     RegistryKey localUserSettings = currentUserRegistryKey.OpenSubKey(LocalSettingsSubKey, false);
                     if (localUserSettings != null) // Take settings from default app location
                     {
-                        Source = SettingSource.Local;
                         GetRegistrySettings(localUserSettings);
                         localUserSettings.Close();
                     }
                     else
                     {
                         LoadDefaults();
-                        ClearErrorMessage();
                         SetRegistrySettings();
                     }
                 }
@@ -122,6 +121,8 @@ namespace Password_Expiry_Tray_2
 
         private void SetRegistrySettings()
         {
+            ClearErrorMessage();
+
             try
             {
                 RegistryKey currentUserKey = Registry.CurrentUser;

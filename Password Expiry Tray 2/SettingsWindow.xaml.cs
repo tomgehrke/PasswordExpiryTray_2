@@ -19,11 +19,13 @@ namespace Password_Expiry_Tray_2
 
             if (AppSettings.Source != Settings.SettingSource.Local)
             {
-                TimerIntervalTextBox.IsReadOnly = true;
-                WarningIntervalTextBox.IsReadOnly = true;
-                WarningThresholdTextBox.IsReadOnly = true;
-                AlertIntervalTextBox.IsReadOnly = true;
-                AlertThresholdTextBox.IsReadOnly = true;
+                TimerIntervalTextBox.IsEnabled = false;
+                WarningIntervalTextBox.IsEnabled = false;
+                WarningThresholdTextBox.IsEnabled = false;
+                AlertIntervalTextBox.IsEnabled = false;
+                AlertThresholdTextBox.IsEnabled = false;
+                ActionTextBox.IsEnabled = false;
+                SaveButton.IsEnabled = false;
             }
         }
 

@@ -1,0 +1,99 @@
+CLASS USER
+
+CATEGORY !!Software
+  POLICY !!PasswordExpiryTray
+    KEYNAME "Software\Policies\PasswordExpiryTray"
+    EXPLAIN !!PET_Explain
+  
+    PART !!PET_TimerInterval NUMERIC REQUIRED
+      VALUENAME "TimerInterval"
+      MIN 1
+      DEFAULT 60
+    END PART
+
+    PART !!PET_WarnThreshold NUMERIC REQUIRED
+      VALUENAME "NotifyThreshold"
+      MIN 1
+      DEFAULT 21
+    END PART
+
+    PART !!PET_WarnInterval NUMERIC REQUIRED
+      VALUENAME "NotifyInterval"
+      MIN 1
+      DEFAULT 24
+    END PART
+
+    PART !!PET_AltertThreshold NUMERIC REQUIRED
+      VALUENAME "AlertThreshold"
+      MIN 1
+      DEFAULT 7
+    END PART
+
+    PART !!PET_AlertInterval NUMERIC REQUIRED
+      VALUENAME "AlertInterval"
+      MIN 1
+      DEFAULT 1
+    END PART
+
+    PART !!PET_Action EDITTEXT 
+      VALUENAME "Action"
+    END PART
+  END POLICY
+
+END CATEGORY
+
+CLASS MACHINE
+
+CATEGORY !!Software
+  POLICY !!PasswordExpiryTray
+    KEYNAME "Software\Policies\PasswordExpiryTray"
+    EXPLAIN !!PET_Explain
+  
+    PART !!PET_TimerInterval NUMERIC REQUIRED
+      VALUENAME "TimerInterval"
+      MIN 1
+      DEFAULT 60
+    END PART
+
+    PART !!PET_WarnThreshold NUMERIC REQUIRED
+      VALUENAME "NotifyThreshold"
+      MIN 1
+      DEFAULT 21
+    END PART
+
+    PART !!PET_WarnInterval NUMERIC REQUIRED
+      VALUENAME "NotifyInterval"
+      MIN 1
+      DEFAULT 24
+    END PART
+
+    PART !!PET_AltertThreshold NUMERIC REQUIRED
+      VALUENAME "AlertThreshold"
+      MIN 1
+      DEFAULT 7
+    END PART
+
+    PART !!PET_AlertInterval NUMERIC REQUIRED
+      VALUENAME "AlertInterval"
+      MIN 1
+      DEFAULT 4
+    END PART
+
+    PART !!PET_Action EDITTEXT 
+      VALUENAME "Action"
+    END PART
+  END POLICY
+
+END CATEGORY
+
+[strings]
+Software="Password Expirty Tray Policies"
+
+PasswordExpiryTray="Password Expiry Tray"
+PET_TimerInterval="Timer Interval (minutes):"
+PET_WarnThreshold="Warn Threshold (days):"
+PET_WarnInterval="Warn Interval (hours):"
+PET_AltertThreshold="Alert Threshold (days):"
+PET_AlertInterval="Alert Interval (hours):"
+PET_Action="Custom action for triggering a password change"
+PET_Explain="Timer Interval:\nThe amount of time between checks. The interval unit is in hours with a check once an hour being the most frequent interval. [Default: 1 hour]\n\nWarn Threshold:\nThe period of lead time where the user is notified that a password expiration is coming soon, but there is still plenty of time. [Default: 14 days]\n\nWarn Interval:\nThe interval of time between notifications. For example, you may want users to see that their password is expiring soon once a day during the notification period. [Default: 24 hours]\n\nAlert Threshold:\nThe period of lead time where the user is alerted that a password expiration is imminent. [Default: 3 days]\n\nAlert Interval:\nThe interval of time between alerts. For example, you may want users to see that their password is about to expire twice a day during the notification period. [Default: 4 hours]\n\nAction:\nA custom action to make available to the user as part of the password changing process. This could be:\n\n* A command line to a script that performs some action\n* A URL to a website that manages password changes\n* A link to a document that provides password changing instructions\n* Whatever you can imagine (within reason)"
